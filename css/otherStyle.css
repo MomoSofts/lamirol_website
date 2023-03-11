@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Josefin+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+/* ============ Restaurant_Bar ============= */
+.container.center {
+    max-width: 1200px;
+    margin: -90px auto;
+    padding: 5px 20px;
+}
+
+.container.center .content {
+    background: rgba(255, 237, 212, 0.315);
+    padding-top: 50px;
+    transition: all .3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.container.center .content:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.144);
+}
+
+.title {
+    text-align: center;
+    color: rgba(19, 71, 119, 0.945);
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid rgba(19, 71, 119, 0.945);
+    border-left: 3px solid rgba(19, 71, 119, 0.945);
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    border-bottom: 3px solid rgba(19, 71, 119, 0.945);
+    border-right: 3px solid rgba(19, 71, 119, 0.945);
+}
+
+.text {
+    color: rgba(128, 128, 128, 0.705);
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.text::before {
+    content: '';
+    bottom: -30px;
+    left: 50%;
+    background-color: rgba(19, 71, 119, 0.726);
+    height: 2px;
+    width: 150px;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.container .img_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.bar_img {
+    margin: 0 0 0px!important;
+}
+
+.container .img_container img {
+    height: 150px;
+    margin: 10px;
+    border-radius: 0px;
+    /* border: 1px solid rgba(255, 255, 255, 0.144); */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.39);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.container .img_container img:hover {
+    filter: brightness(.5);
+    transform: scale(1.05);}
+
+@media screen and (max-width: 910px) {
+    .container .img_container img {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .container .img_container img {
+        height: 300px;
+    }
+}
+
+/* ============ Evenementiel ============= */
+main {
+    background-color: whitesmoke;
+}
+
+.container.event {
+    max-width: 1000px;
+    margin-top: -50px;
+    margin-bottom: -100px !important;
+    border-left: 6px solid rgba(245, 222, 179, 0.178);
+    border-right: 6px solid rgba(245, 222, 179, 0.178);
+    border-bottom: 12px solid rgb(245, 222, 179);
+    border-top: 16px solid rgb(245, 222, 179);
+    background: linear-gradient(134deg, rgba(245, 222, 179, 0.178) 50%, rgb(245, 222, 179) );
+}
+
+.evenementiel_info {
+    margin-bottom: 50px !important;
+    margin-top: -20px !important;
+}
+
+.evenementiel_info .title {
+    padding: 10px 30px;
+}
+
+.content_img.evenementiel {
+    background: url(../) no-repeat;
+    height: 640px;
+    margin-top: 50px;
+}
+
+.video video {
+    width: 100%;
+}
+
+/* ============ Sport ============= */
+
+.content_img {
+    border-radius: 2px;
+    top: -30px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: url(../img/lamirol_img/sport.jpg) no-repeat center/cover;
+}
+main .content_img .breadcrumb-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.493);
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    /* padding-top: 7%; */
+}
+
+main .content_img .breadcrumb-text .title{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sport_align {
+    justify-content: center;
+}
+
+.sport_img_hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.sport_img_hover:hover {
+    filter: brightness(.5);
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgba(131, 131, 131, 0.466);
+}
+
+.infos {
+    border: 1px solid burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 12px auto;
+    margin-bottom: -100px;
+    padding: 40px 30px 0 30px;
+    background: linear-gradient(134deg,  rgba(245, 222, 179, 0.795) 50%, rgba(245, 222, 179, 0.37) 50%);
+}
+
+.infos .info_text {
+    flex: 1;
+    min-width: 210px;
+}
+
+.infos img {
+    flex: 1 1 10%;
+    height: 300px;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+/* ============ Pool ============= */
+.content_img.pool {
+    background: url(../img/lamirol_img/pool.jpg) no-repeat center/cover;
+    height: 400px;
+    top: -50px;
+}
+
+main .content_img.pool .breadcrumb-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    /* padding-top: 10%; */
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.center .circle {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.center .circle img {
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.center .circle img:hover {
+    filter: brightness(.5);
+    transform: scale(1.2);
+}
+
+/* ============ Room ============= */
+
+.content_img.room {
+    background: url(../img/lamirol_img/slide2.jpeg) no-repeat center/cover;
+    height: 500px;
+    top: -50px;
+}
+
+main .content_img.room .breadcrumb-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.589);
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    /* padding-top: 15%; */
+}
+
+.container .img_container.room_img {
+    background: linear-gradient(134deg,rgba(245, 222, 179, 0.37) 50%, rgb(245, 222, 179) 50%) ;
+    border-radius: 50%;
+}
+
+.container .img_container.room_img img {
+    margin: 20px 5px;
+}
+
+/* ============ Goupe_Elecvtrogene ============= */
+
+.content_img.group {
+    background: url(../img/lamirol_img/blog3.jpeg) no-repeat center/cover;
+    height: 400px;
+    top: -50px;
+}
+
+.group_elec {
+    border-radius: 0px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.group_elec img {
+    height: 250px;
+    /* width: 300px; */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.center .group_elec:hover {
+    box-shadow: 2px 5px 15px 5px rgba(161, 161, 161, 0.486);
+}
+
+.center .group_elec img:hover {
+    filter: brightness(.5);
+    transform: scale(1.2);
+}
+
+/* ============ Equipe ============= */
+.content_img.equip {
+    background: url(../img/lamirol_img/equipe3.jpeg) no-repeat center/cover;
+    height: 400px;
+    top: -50px;
+}
+
+.equip_img {
+    height: 250px !important;
+}
+
+/* ============ Locaux ============= */
+.content_img.locaux {
+    background: url(../img/lamirol_img/Locaux/0_global2.jpeg) no-repeat center/cover;
+    height: 500px;
+    top: -50px;
+}
+
+main .content_img.room .breadcrumb-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.589);
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    /* padding-top: 15%; */
+}
+
+.container .img_container.locaux_img {
+    background: linear-gradient(134deg,rgba(245, 222, 179, 0.37) 50%, rgb(245, 222, 179) 50%) ;
+    border-radius: 50%;
+}
+
+.container .img_container.locaux_img img {
+    margin: 20px 5px;
+}
+
+/* ============ Navette ============= */
+
+.content_img.navette {
+    background: url(../img/logo_lamirol_trans.png) no-repeat center;
+    height: 400px;
+}
+
+.navette_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: 1px solid burlywood; */
+    padding: 0;
+}
+
+.navette_container .info_text {
+    flex: 1 1 50%;
+    /* width: 50%; */
+    background-color: rgb(247, 238, 222) ;
+    padding: 55px;
+}
+
+.navette_container img {
+    flex: 1 1 50%;
+    height: 300px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.navette_container img:hover {
+    transform: scale(1.02);
+    filter: brightness(.8);
+}
+
+/* ============ Room Service ============= */
+
+.content_img.room_serv {
+    background: url(../img/lamirol_img/room_service.jpg) no-repeat center;
+    height: 400px;
+}
+
+.room_serv_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    /* border: 1px solid burlywood; */
+    padding: 0;
+    /* border-radius: 30%; */
+}
+
+.room_serv_container .info_text {
+    flex: 1 1 50%;
+    /* width: 50%; */
+    background-color: rgb(247, 238, 222) ;
+    padding: 45px;
+}
+
+.room_serv_container img {
+    flex: 1 1 50%;
+    height: 300px;
+    width: 365px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.room_serv_container img:hover {
+    transform: scale(1.02);
+    filter: brightness(.8);
+}
+
+/* ============ Salle de Conference ============= */
+
+.content_img.salle {
+    background: url(../img/lamirol_img/Salle_Conférence/img1.jpeg) no-repeat center;
+    height: 400px;
+}
+
+.salle_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+}
+
+.salle_container .info_text {
+    flex: 1 1 50%;
+    /* width: 50%; */
+    background-color: rgb(247, 238, 222) ;
+    padding: 20px 25px 0;
+}
+
+.salle_container img {
+    flex: 1 1 50%;
+    height: 320px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.salle_container img:hover {
+    transform: scale(1.02);
+    filter: brightness(.5);
+}
+
+/* ============ Contact ============= */
+
+.contact-text {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact-form.contact_hover input,
+.contact-form.contact_hover textarea {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact-form.contact_hover input:hover,
+.contact-form.contact_hover input:valid,
+.contact-form.contact_hover textarea:hover,
+.contact-form.contact_hover textarea:valid {
+    border: 1px solid burlywood;
+}
+
+/* ============ Vehicules ============= */
+
+.content_img.location {
+    background: url(../img/logo_lamirol_trans.png) no-repeat center;
+    height: 400px;
+}
+
+.col-sm-3 {
+    max-width: none !important;
+}
+
+.room-thumb {
+    margin-bottom: 30px;
+}
+
+.list-unstyled {
+    margin-left: -20px;
+}
+
+.list-unstyled li {
+    font-size: 11px;
+}
+
+/* ============ Reservation ============= */
+
+.buttons button {
+    color: burlywood;
+    padding: 5px 10px;
+    border-radius: 7px 7px 0px 0px ;
+    border: 1px solid transparent;
+    background: #fff;
+    outline: none;
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+    background: bisque;
+}
+
+
+.reservation_container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contact_container {
+    display: flex;
+    padding: 0 !important;
+}
+
+
+.contact_container .row {
+    display: block;
+    width: 80%;
+}
+
+@media screen and (max-width: 991px) {
+    .contact_container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact_container .row {
+        width: 100%;
+    }
+}
+.contact_container .row .col-lg-7 {
+    max-width: none;
+}
+
+.contact_container .row .col-lg-7 form {
+    width: 100%;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact_container .row .col-lg-7 legend {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.contact_container .row .col-lg-7 form .row {
+    width: 100% !important;
+}
+
+.contact_container .row .col-lg-7 form .row .col-lg-12 {
+    margin-bottom: -15px;
+}
+.contact_container .row .col-lg-7 form .row .col-lg-12 select {
+    width: 100% !important;
+    display: block !important;
+    color: #a3a3a3;
+    padding-left: 20px;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+.contact_container .row .col-lg-7 form .row .col-lg-12 select option {
+    color: rgb(44, 44, 44);
+    padding: 10px 0;
+}
+
+.nice-select {
+    width: 100%;
+    color: #a3a3a3;
+    display: none;
+}
+
+.contact_container .row .col-lg-7 form .row input,
+.contact_container .row .col-lg-7 form .row select {
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Cabin Condensed', sans-serif;
+    display: block;
+}
+
+.checkbox_container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 50px;
+}
+
+.checkbox_container .checkbox {
+    height: 20px !important;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.checkbox_container label {
+    cursor: pointer;
+}
+
+.reserv_ind {
+    display: flex;
+}
+
+.reserv_entr {
+    display: none;
+}
+
+.focus {
+    background: burlywood !important;
+    color: black !important;
+}
+
+/* ============ Footer ============= */
+
+.footer-container {
+    padding-top: 0;
+}

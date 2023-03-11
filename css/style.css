@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Josefin+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+header {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+.offcanvas-menu-wrapper {
+	font-family: 'Cabin Condensed', sans-serif;
+}
+footer {
+	font-family: 'Cabin Condensed', sans-serif;
+}
+.footer-container {
+    padding-top: 0;
+}
 /******************************************************************
   Template Name: Sona
   Description: Sona Hotel Html Template
@@ -89,7 +107,7 @@ ul, ol {
   Helper CSS
 -----------------------*/
 
-.menu-top-head li, i, select{
+.menu-top-head li{
 	color: #ffffff !important;
 
 }
@@ -103,10 +121,11 @@ ul, ol {
 
 
 .header-section {
-	position:absolute;
+	position: relative;
+	top: 0;
 	width: 100%;
   background-color: rgba(223, 180, 116, 0.5) !important;
-  z-index: 1;
+  z-index: 10;
 }
 
 .section-title {
@@ -298,7 +317,7 @@ ul, ol {
 .top-nav .tn-left li {
 	list-style: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	color: #19191a;
 	font-weight: 500;
 	padding: 14px 0 12px;
@@ -446,7 +465,7 @@ ul, ol {
 	visibility: visible;
 }
 .menu-item .nav-menu .mainmenu li a {
-	font-size: 16px;
+	font-size: 14px;
 	color: #19191a;
 	margin-right: 42px;
 	font-weight: 500;
@@ -490,7 +509,7 @@ ul, ol {
 	display: block;
 }
 .menu-item .nav-menu .mainmenu li .dropdown li a {
-	font-size: 16px;
+	font-size: 12px;
 	color: #19191a;
 	display: block;
 	text-align: left;
@@ -774,8 +793,15 @@ ul, ol {
 }
 .hp-room-items .row {
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: center;
 }
+
+.col-sm-3 {
+    max-width: none !important;
+	margin-bottom: 20px;
+}
+
 .hp-room-items .hp-room-item {
 	height: 600px;
 	margin-right: -15px;
@@ -1158,9 +1184,14 @@ ul, ol {
 	position: relative;
 	height: 279px;
 	margin-bottom: 20px;
-	border-radius: 5px;
+	border-radius: 0px;
 	position: relative;
 	z-index: 1;
+	transition: all 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+		transform: scaleX(1.05);
 }
 .gallery-item:hover:after {
 	opacity: 1;
@@ -1586,7 +1617,14 @@ ul, ol {
 	height: 450px;
 	position: relative;
 	margin-bottom: 30px;
-	border-radius: 5px;
+	border-radius: 0px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.blog-item:hover{
+	transform: scaleX(1.05);
+	filter: brightness(0.6);
 }
 .blog-item.small-size {
 	height: 400px;
