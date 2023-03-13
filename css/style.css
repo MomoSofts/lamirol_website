@@ -1,20 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Josefin+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
-
-body {
-    font-family: 'Cabin Condensed', sans-serif;
-}
-
-header {
-    font-family: 'Cabin Condensed', sans-serif;
-}
-.offcanvas-menu-wrapper {
-	font-family: 'Cabin Condensed', sans-serif;
-}
-footer {
-	font-family: 'Cabin Condensed', sans-serif;
-}
 .footer-container {
     padding-top: 0;
+}
+
+.col-lg-10 {
+	padding-left: 0;
+	text-align: right;
 }
 /******************************************************************
   Template Name: Sona
@@ -82,7 +72,7 @@ h6 {
 }
 p {
 	font-size: 16px;
-	font-family: "Cabin", sans-serif;
+	/* font-family: "Cabin", sans-serif; */
 	color: #6b6b6b;
 	font-weight: 400;
 	line-height: 26px;
@@ -318,7 +308,7 @@ ul, ol {
 	list-style: none;
 	display: inline-block;
 	font-size: 14px;
-	color: #19191a;
+	color: #fff;
 	font-weight: 500;
 	padding: 14px 0 12px;
 	margin-right: 64px;
@@ -467,7 +457,7 @@ ul, ol {
 .menu-item .nav-menu .mainmenu li a {
 	font-size: 14px;
 	color: #19191a;
-	margin-right: 42px;
+	margin-right: 32px;
 	font-weight: 500;
 	display: inline-block;
 	padding: 27px 0;
@@ -2057,7 +2047,7 @@ ul, ol {
 }
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 1300px;
 	}
 }
 /* Medium Device: 1200px */
