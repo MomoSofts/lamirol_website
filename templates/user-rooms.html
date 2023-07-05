@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="template.html :: head"></head>
+
+<body >
+<!-- Page Preloder -->
+<div th:insert="template.html :: preloader" id="preloder"></div>
+
+<!-- Header Section Begin -->
+<header th:insert="template.html :: header" class="header-section header-normal"></header>
+<!-- Header End -->
+
+<!-- Breadcrumb Section Begin -->
+<div class="page-title-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h3>Hebergement disponible</h3>
+                    <br></br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<!-- Rooms Section Begin -->
+<section class="rooms-section spad">
+
+    <div class="content-rooms">
+        <div class="row mt-lg-5">
+
+            <div class="col-lg-8" >
+                <div class="m-5" style="border: 1px solid lightgray; max-height:158px" th:each="reservationDTO: ${applicData.reservations}" >
+                    <div class="row col-sm-12 p-1" th:each="room: ${reservationDTO.roomDTOS}" >
+
+                      <div class="col-sm-10">
+                        <h2 th:text="${room.roomName}"></h2>
+                        <p>
+                        <table >
+                            <tbody>
+                            <tr>
+                                <td><b>Quantite</b>  </td>
+                                <td><span th:text="${reservationDTO.nbr}"></span>
+
+                                <!--    <select type="text" th:id="'quantite'+${reservationDTO.nbr}"
+                                              th:onchange="'totalPrice('+${room.roomPrice}+','+${roomStat.index}+')'">
+                                    <option th:value="${reservationDTO.nbr}" th:text="${reservationDTO.nbr}" selected></option>
+                                    <option th:each="i : ${#numbers.sequence(1, reservationDTO.nbr)}"
+                                            th:value="${i}" th:text="${i}"></option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b> Prix unitaire </b> </td>
+                                <td><input readonly id="prix"  th:value="${reservationDTO.reservationPrice}" style="border: 0px solid white;" />   </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </p>
+                    </div>
+                      <div class="col-sm-2 p-2">
+                        <h3><input readonly th:id="'total-price-'+${roomStat.index}" class="total-prices" style="font-size: 22px; font-weight:bold; border:0 solid white" th:value="${reservationDTO.reservationPrice}" /><span style="font-size: 11px"> F CFA / Nuit&eacute;e</span></h3>
+                        <a th:href="'/reservation/v1/user-reservations/cancel/'+${reservationDTO.rersevationID}" class="btn btn-black" ><i class="fa fa-trash" style="color:black"></i>  Annuler</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4" >
+                <div >
+                    <form method="post"  >
+                        <input type="hidden">
+                        <input type="hidden" >
+                        <input type="hidden" >
+                        <input type="hidden" >
+                        <input type="hidden" >
+                        <input type="hidden" >
+                        <div class="room-item">
+                            <div >
+                                <img  alt="">
+                            </div>
+                            <div class="ri-text">
+                                <h3 style="color:rgb(95, 75, 12); text-transform: uppercase" >TOTAL</h3>
+                                <h2 style="color:black">
+                                    <span id="total-bill" th:text="${applicData.totalPrice}"></span> F CFA</h2>
+                                </table>
+
+
+                                <div class="mt-5">
+                                    <a href="/reservation/v1/go-to-cinetpay" class="btn btn-back" style="width: 100%"><i class="fa fa-money"></i> PAYER MAITENANT</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Rooms Section End -->
+
+<!-- Footer Section Begin -->
+<footer th:insert="template.html :: footer" class="footer-section">
+</footer>
+<!-- Footer Section End -->
+
+</body>
+
+</html>

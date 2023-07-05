@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="template.html :: head"></head>
+
+<body>
+<!-- Page Preloder -->
+<div th:insert="template.html :: preloader" id="preloder"></div>
+
+<!-- Header Section Begin -->
+<header th:insert="template.html :: header" class="header-section header-normal"></header>
+<!-- Header End -->
+
+<!-- Breadcrumb Section Begin -->
+<div class="page-title-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h3>Hebergement disponible</h3>
+                    <br></br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<!-- Rooms Section Begin -->
+<section class="rooms-section spad">
+
+    <div class="content-rooms">
+        <div class="row mt-lg-5">
+            <div th:each="room: ${applicData}" class="col-lg-4 col-md-6">
+                <div class="room-item">
+                    <div th:each="rmedia: ${room.roomMedias}">
+                        <img th:if="${rmediaStat.index}==0" th:src="'/reservation/v1/image/'+${rmedia}" alt="">
+                    </div>
+
+                    <div class="ri-text">
+                        <h3 style="color:rgb(95, 75, 12); text-transform: uppercase" th:text="${room.roomName}"></h3>
+                        <h4 th:text="${room.roomPrice}+' FCFA'"> <span> Nuitee</span></h4>
+                        <table >
+                            <tbody>
+                            <tr>
+                                <td><i class="fa fa-bath" style="color:darkgoldenrod !important;"></i> Espacieux</a> </td>
+                                <td><i class="fa fa-group" style="color:darkgoldenrod !important;"></i> 3 personnes </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-bed" style="color:darkgoldenrod !important;"></i> King Bed </td>
+                                <td><i class="fa fa-television" style="color:darkgoldenrod !important;"></i> TV et Split </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-wifi" style="color:darkgoldenrod !important;"></i>  Wifi Gratuit</td>
+                                <td><i class="fa fa-cc-diners-club" style="color:darkgoldenrod !important;"></i> Room Service </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <textarea readonly style="display: block; font-size: 16px; border:0px; width:100%" th:text="${room.roomDescription}">
+
+                            </textarea>
+                        <div class="mt-5">
+                            <a th:href="'/reservation/v1/go-to-cinetpay/'+${room.roomPrice}" class="btn btn-back" style="width: 100%"><i class="fa fa-bell"></i> RESERVER</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <form action="#">
+                    <div class="check-date">
+                        <label for="date-in">Date d'entr&eacute;e:</label>
+                        <input type="text" class="date-input" id="date-in">
+                        <i class="icon_calendar"></i>
+                    </div>
+                    <div class="check-date">
+                        <label for="date-out">Date de sortie:</label>
+                        <input type="text" class="date-input" id="date-out">
+                        <i class="icon_calendar"></i>
+                    </div>
+                    <div class="select-option">
+                        <label for="guest-adult">Visiteurs adultes:</label>
+                        <select id="guest-adult">
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                        </select>
+                    </div>
+                    <div class="select-option">
+                        <label for="guest-child">Visiteurs enfants:</label>
+                        <select id="guest-child">
+                            <option value="1">1 Enfant</option>
+                            <option value="2">2 Enfants</option>
+                            <option value="3">3 Enfants</option>
+                            <option value="4">4 Enfants</option>
+                        </select>
+                    </div>
+                    <div class="select-option">
+                        <label for="room">Nbre de chambres:</label>
+                        <input id="room" value="text" name="room" />
+                    </div>
+                    <a href="http://localhost:7000/reservation/v1/search_available" type="submit" class="btn btn-default btn-back">Voir les disponibilit&eacute;s</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Rooms Section End -->
+
+<!-- Footer Section Begin -->
+<footer th:insert="template.html :: footer" class="footer-section"></footer>
+<!-- Footer Section End -->
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="templatepages.html :: head"></head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder" th:insert="templatepages.html :: preloader"></div>
+
+<!-- Offcanvas Menu Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="canvas-open">
+    <i class="icon_menu"></i>
+</div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="icon_close"></i>
+    </div>
+    <div class="search-icon  search-switch">
+        <i class="icon_search"></i>
+    </div>
+    <div class="header-configure-area">
+        <div class="language-option">
+            <img src="/img/flag.jpg" alt="">
+            <span>EN <i class="fa fa-angle-down"></i></span>
+            <div class="flag-dropdown">
+                <ul>
+                    <li><a href="#">Zi</a></li>
+                    <li><a href="#">Fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" class="bk-btn">Mes Reservations</a>
+    </div>
+    
+    <div id="mobile-menu-wrap"></div>
+    <div class="top-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-eye"></i></a>
+    </div>
+    <ul class="top-widget">
+        <li><i class="fa fa-phone"></i> (+225) 07 09 115 115</li>
+        <li><i class="fa fa-envelope"></i> info@lamirolhotel.com</li>
+    </ul>
+</div>
+<!-- Offcanvas Menu Section End -->
+<section class="">
+    <!-- Header Section Begin -->
+
+    <!-- Header Section Begin -->
+    <header th:insert="templatepages.html :: header" class="header-section header-normal"></header>
+    <!-- Header End -->
+    <!-- Main start -->
+
+    <main style=" background: url('/img/lamirol_img/back.jpg'); background-size: cover;">
+        <!-- Breadcrumb Section Begin -->
+    <div class="breadcrumb-section">
+        <div class="container" style="background: #ffffffcb; padding: 5%;">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <p style="font-size: 20px; color:rgb(0, 93, 151); margin-bottom: -16.5px; text-align: left; font-weight: bold; border-bottom: 1px solid rgb(0, 93, 151); width: 130px; margin-left: 40px;">Evènementiel<hr style="margin-left: 40px;"></p>
+                        
+                            <div class="bt-option" style="margin-top: 40px;">
+                                <p class="text" style="font-size: 18px;">Espace mis à la disposition du public pour des événements tels que les mariages, les baptêmes, les anniversaires, les concerts… Nous avons sur le site une salle de réception climatisée de 100 personnes et un espace ouvert couvert de bâches pouvant recevoir 250 personnes.</p>
+                            </div>
+                    </div><br>
+                    <p style="font-size: 16px; color:rgb(66, 144, 192); margin-bottom: -15px;">Espace Ouvert</p>
+                    <hr>
+                </div>
+                <div class="col-lg-12 evenementiel" style="margin-top: 20px; margin-bottom: 50px;">
+                    <div class="video">
+                        <video autoplay muted loop="infinite" style="width: 100%;" src="/lamirolvideos/outside_vid.mp4"></video>
+                    </div>
+                    </div>
+                </div>
+                <p style="font-size: 16px; color:rgb(66, 144, 192); margin-bottom: -15px;">Salle de reception climatisée</p>
+                    <hr>
+                <div class="col-lg-12 evenementiel" style="margin-top: 40px;">
+                    <div class="video" >
+                        <video autoplay muted loop="infinite" style="width: 100%;" src="/lamirolvideos/inside_vid.webm"></video>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section End -->
+</main>
+<!-- Main end -->
+
+</section>
+
+<!-- Footer Section Begin -->
+<footer th:insert="template.html :: footer" class="footer-section"></footer>
+<!-- Footer Section End -->
+</body>
+
+</html>
+
+
