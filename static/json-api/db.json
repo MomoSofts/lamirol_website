@@ -1,0 +1,66 @@
+{
+  "posts": {
+    "reservations": [
+      {
+        "reservationId": "Reserv01",
+        "roomNbrAdult" : 1,
+        "roomNbrChild" : 1,
+        "dateIn" : "2023-06-20",
+        "dateOut" : "2023-06-22",
+        "reservationDate" : "2023-06-19",
+        "user": {
+            "email": "christ_01@mail.com",
+            "password": "christ123",
+            "name": "YAO",
+            "surName": "Christ",
+            "contact": "0102030405",
+            "picture": ""
+        },
+        "room": {
+          "roomId": "suite001",
+          "roomType": "SUITE",
+          "roomName": "SUITE",
+          "roomDescription": "Chambre disposant de toutes les commodités dignes de personnalité de haut de rang",
+          "roomPrice": 45000.00,
+          "roomNbr": 1,
+          "roomImage": "https://lamirolhotel.com/images/hebergement/suite/img1.JPG"
+      }
+    },
+    {
+      "reservationId": "Reserv02",
+      "roomNbrAdult" : 1,
+      "roomNbrChild" : 1,
+      "dateIn" : "2023-06-20",
+      "dateOut" : "2023-06-22",
+      "reservationDate" : "2023-06-19",
+      "user": {
+          "email": "christ_01@mail.com",
+          "password": "christ123",
+          "name": "YAO",
+          "surName": "Christ",
+          "contact": "0102030405",
+          "picture": ""
+      },
+      "room": {
+        "roomId": "Cham001",
+        "roomType": "Chambre standard rez de chaussée",
+        "roomName": "Chambre standard rez de chaussée",
+        "roomDescription": "Chambre personnalisée bénéficiant d’un garage intérieur pour préserver la discrétion",
+        "roomPrice": 30000.00,
+        "roomNbr": 1,
+        "roomImage": "https://lamirolhotel.com/images/hebergement/chambre_standard/img5.JPG"
+    }
+  }
+    ]
+  },
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

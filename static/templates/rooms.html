@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="template.html :: head"></head>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+<!-- Css Styles -->
+<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+<link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="/css/prettyPhoto.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/theme.css" type="text/css">
+
+<body >
+<!-- Page Preloder -->
+<div th:insert="template.html :: preloader" id="preloder"></div>
+
+<!-- Header Section Begin -->
+<header th:insert="template.html :: header" class="header-section header-normal"></header>
+<!-- Header End -->
+
+<!-- Breadcrumb Section Begin -->
+<div class="page-title-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h3>Hebergement disponible</h3>
+                    <br></br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<!-- Rooms Section Begin -->
+<section class="rooms-section spad">
+
+        <div class="content-rooms">
+            <div class="row mt-lg-5">
+                <div class="col-lg-4 col-md-8 mt-3">
+                    <div class="mt-5" >
+                        <form method="post" style="width: 400px; margin: 0 15px;">
+                            <input class="email" type="hidden" value="">
+                            <input class="roomNbr" type="hidden" value="">
+                            <input class="roomNbrAdult" type="hidden" value="">
+                            <input class="roomNbrChild" type="hidden" value="">
+                            <input class="dateIn" type="hidden" value="">
+                            <input class="roomId" type="hidden" value="">
+                            <div class="room-item">
+                                <div >
+                                    <div class="image"></div>
+                                </div>
+                                <div class="ri-text">
+                                    <h3 class="name" style="color:rgb(95, 75, 12); text-transform: uppercase; text-overflow: ellipsis; overflow: hidden; width: 300px; white-space: nowrap;"></h3>
+                                    <h4> <span class="price"></span>  FCFA <span> Nuitee</span></h4>
+                                    <table >
+                                        <tbody>
+                                            <tr>
+                                                <td><i class="fa fa-bath" style="color:darkgoldenrod !important;"></i> Espacieux</a> </td>
+                                                <td><i class="fa fa-group" style="color:darkgoldenrod !important;"></i> 3 personnes </td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-bed" style="color:darkgoldenrod !important;"></i> King Bed </td>
+                                                <td><i class="fa fa-television" style="color:darkgoldenrod !important;"></i> TV et Split </td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-wifi" style="color:darkgoldenrod !important;"></i>  Wifi Gratuit</td>
+                                                <td><i class="fa fa-cc-diners-club" style="color:darkgoldenrod !important;"></i> Room Service </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+        
+                                    <textarea class="description" readonly style="display: block; font-size: 15px; resize: none; border:0px; width:100%; height: 70px; text-align: justify;"></textarea>
+                                    <div class="mt-1">
+                                        <button type="submit"  class="btn btn-back" style="width: 100%"><i class="fa fa-bell"></i> RESERVER</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div th:each="room: ${applicData.roomDTOS}" class="col-lg-4 col-md-6">
+                    <form method="post" th:action="'/reservation/v1/user-reservations/'+${room.roomType}" onsubmit="searcher(e)" id="searcher" th:object="${reservationDTO}" >
+                        <input type="hidden" id="email" th:name="email" th:value="${applicData.email}">
+                        <input type="hidden" id="nbr" th:name="nbr" th:value="${applicData.nbr}">
+                        <input type="hidden" id="nbr-adult" th:name="nbr-adult" th:value="${applicData.roomNbrAdult}">
+                        <input type="hidden" id="nbr-enfant" th:name="nbr-enfant" th:value="${applicData.roomNbrChild}">
+                        <input type="hidden" id="date-in" th:name="date-in" th:value="${applicData.dateIn}">
+                        <input type="hidden" id="date-out" th:name="date-out" th:value="${applicData.dateOut}">
+                        <input type="hidden" id="room-id" th:name="room-id" th:value="${room.roomId}">
+                        <input type="hidden" id="room-type" th:name="room-type" th:value="${room.roomType}">
+                    <div class="room-item">
+                        <div th:each="rmedia: ${room.roomMedias}">
+                            <img th:if="${rmediaStat.index}==0" th:src="'/reservation/v1/image/'+${rmedia}" alt="">
+                        </div>
+                        <div class="ri-text">
+                            <h3 style="color:rgb(95, 75, 12); text-transform: uppercase" th:text="${room.roomName}"></h3>
+                            <h4 th:text="${room.roomPrice}+' FCFA'"> <span> Nuitee</span></h4>
+                            <table >
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-bath" style="color:darkgoldenrod !important;"></i> Espacieux</a> </td>
+                                        <td><i class="fa fa-group" style="color:darkgoldenrod !important;"></i> 3 personnes </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-bed" style="color:darkgoldenrod !important;"></i> King Bed </td>
+                                        <td><i class="fa fa-television" style="color:darkgoldenrod !important;"></i> TV et Split </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-wifi" style="color:darkgoldenrod !important;"></i>  Wifi Gratuit</td>
+                                        <td><i class="fa fa-cc-diners-club" style="color:darkgoldenrod !important;"></i> Room Service </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <textarea readonly style="display: block; font-size: 16px; border:0px; width:100%" th:text="${room.roomDescription}">
+
+                            </textarea>
+                            <div class="mt-5">
+                                <button type="submit"  class="btn btn-back" style="width: 100%"><i class="fa fa-bell"></i> RESERVER</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Rooms Section End -->
+
+<!-- Footer Section Begin -->
+<footer th:insert="template.html :: footer" class="footer-section"></footer>
+<!-- Footer Section End -->
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/api.js"></script>
+<script>
+    var slideIndex = 0;
+    carousel();
+    carousel2();
+    carousel3();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 1700);
+    }
+
+    function carousel2() {
+        var i;
+        var x = document.getElementsByClassName("mySlides2");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel2, 2400);
+    }
+
+    function carousel3() {
+        var i;
+        var x = document.getElementsByClassName("mySlides3");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel3, 2700);
+    }
+    $(function (){
+        $(".offcanvas-menu-wrapper").show()
+    })
+
+</script>
+</body>
+
+</html>

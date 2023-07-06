@@ -1,0 +1,582 @@
+body {
+    font-family: sans-serif;
+}
+
+.header-section {
+    background-image: linear-gradient(-60deg,rgb(223, 180, 116), rgb(95, 75, 12));
+}
+
+.menu-item .nav-menu .mainmenu li a {
+	color: #fff;
+}
+
+/* ============ Restaurant_Bar ============= */
+
+.container.center {
+    max-width: 1400px;
+    margin: -90px auto;
+    padding: 5px 20px;
+}
+
+.container.center .content {
+    padding-top: 5px;
+    transition: all .3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.container.center .content:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.144);
+}
+
+.title {
+    text-align: center;
+    color: rgba(19, 71, 119, 0.945);
+    position: relative;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    font-size: 23px;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 30%;
+    background: gray;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 2px;
+    width: 30%;
+    background: gray;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+
+.text {
+    color: #000;
+    text-align: justify;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.container .img_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.bar_img {
+    margin: 0 0 0px!important;
+}
+
+.container .img_container img {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 0px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.39);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.container .img_container img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 910px) {
+    .container .img_container img {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .container .img_container img {
+        height: 250px;
+        width: 80%;
+    }
+}
+
+/* ============ Evenementiel ============= */
+main {
+    background-color: whitesmoke;
+}
+
+.container.event {
+    margin-bottom: -200px !important;
+}
+
+.evenementiel_info {
+    margin-bottom: 50px !important;
+    margin-top: -20px !important;
+}
+
+.evenementiel_info .title {
+    padding: 10px 30px;
+}
+
+.evenementiel {
+    background: url(../) no-repeat;
+    
+}
+
+.video video {
+    width: 100%;
+}
+
+/* ============ Sport ============= */
+
+.sport_img {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.sport_img:hover {
+    opacity: 0.8;
+    transform: scaleX(1);
+}
+
+.infos .info_text {
+    flex: 1;
+    min-width: 210px;
+}
+
+.infos img {
+    flex: 1 1 10%;
+    height: 300px;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 1260px) {
+    .sport_img {
+        width: 430px !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .sport_img {
+        width: 100% !important;
+    }
+}
+
+/* ============ Pool ============= */
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.center .circle {
+    border-radius: .6rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 270px;
+    transition: all 0.2s ease-in-out;
+}
+
+.center .circle img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.center .circle:hover {
+    opacity: 0.8;
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 990px) {
+    .center .circle {
+        width: 600px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .center .circle {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+/* ============ Room ============= */
+.room_img {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.room_img img {
+    height: 170px;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.room_img img:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1200px) {
+    .room_img img {
+        height: 250px;
+    }
+}
+
+/* ============ Goupe_Elecvtrogene ============= */
+
+.group_elec {
+    border-radius: .6rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 270px;
+    transition: all 0.2s ease-in-out;
+}
+
+.group_elec img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.center .group_elec:hover {
+    opacity: 0.8;
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 990px) {
+    .group_elec {
+        width: 600px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .group_elec {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+/* ============ Equipe ============= */
+
+.equip_img {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.equip_img img {
+    height: 230px;
+    width: 380px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.equip_img img:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 990px) {
+    .equip_img img {
+        height: 300px;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .equip_img img {
+        height: 270px;
+    }
+}
+
+/* ============ Locaux ============= */
+
+.container .img_container.locaux_img img {
+    margin: 20px 5px;
+}
+
+/* ============ Navette ============= */
+
+.titre {
+    text-align:justify;
+    color: rgba(19, 71, 119, 0.945);
+    position: relative;
+    margin-bottom: -16.7px !important;
+    border-bottom: 1px solid rgba(19, 71, 119, 0.945);
+    padding: 10px 0;
+    font-size: 17px;
+    width: 160px;
+}
+
+.navette_container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid burlywood;
+    padding: 0;
+}
+
+.navette_container .info_text {
+    flex: 1 1 50%;
+    background-color: rgb(247, 238, 222) ;
+    padding: 55px;
+}
+
+.navette_container img {
+    flex: 1 1 50%;
+    height: 300px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.navette_container img:hover {
+    transform: scaleY(1.02);
+    filter: brightness(.8);
+}
+
+/* ============ Room Service ============= */
+
+.room_serv_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    border: 1px solid burlywood;
+    padding: 0;
+}
+
+.room_serv_container .info_text {
+    flex: 1 1 50%;
+    background-color: rgb(247, 238, 222) ;
+    padding: 45px;
+}
+
+.room_serv_container img {
+    flex: 1 1 50%;
+    height: 300px;
+    width: 365px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.room_serv_container img:hover {
+    transform: scaleY(1.02);
+    filter: brightness(.8);
+}
+
+/* ============ Salle de Conference ============= */
+
+.salle_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid burlywood;
+    padding: 0;
+}
+
+.salle_container .info_text {
+    flex: 1 1 50%;
+    background-color: rgb(247, 238, 222) ;
+    padding: 20px 25px 0;
+}
+
+.salle_container img {
+    flex: 1 1 50%;
+    height: 320px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.salle_container img:hover {
+    transform: scaleY(1.02);
+    filter: brightness(.5);
+}
+
+/* ============ Contact ============= */
+
+.contact-text {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact-form.contact_hover input,
+.contact-form.contact_hover textarea {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact-form.contact_hover input:hover,
+.contact-form.contact_hover input:valid,
+.contact-form.contact_hover textarea:hover,
+.contact-form.contact_hover textarea:valid {
+    border: 1px solid burlywood;
+}
+
+/* ============ Vehicules ============= */
+
+.content_img.location {
+    background: url(../img/logo_lamirol_trans.png) no-repeat center;
+    height: 400px;
+}
+
+.col-sm-3 {
+    max-width: none !important;
+}
+
+.room-thumb {
+    margin-bottom: 30px;
+}
+
+.list-unstyled {
+    margin-left: -20px;
+}
+
+.list-unstyled li {
+    font-size: 11px;
+}
+
+/* ============ Reservation ============= */
+
+.buttons button {
+    color: burlywood;
+    padding: 5px 10px;
+    border-radius: 7px 7px 0px 0px ;
+    border: 1px solid transparent;
+    background: #fff;
+    outline: none;
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+    background: bisque;
+}
+
+
+.reservation_container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contact_container {
+    display: flex;
+    padding: 0 !important;
+}
+
+
+.contact_container .row {
+    display: block;
+    width: 80%;
+}
+
+@media screen and (max-width: 991px) {
+    .contact_container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact_container .row {
+        width: 100%;
+    }
+}
+.contact_container .row .col-lg-7 {
+    max-width: none;
+}
+
+.contact_container .row .col-lg-7 form {
+    width: 100%;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.contact_container .row .col-lg-7 legend {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.contact_container .row .col-lg-7 form .row {
+    width: 100% !important;
+}
+
+.contact_container .row .col-lg-7 form .row .col-lg-12 {
+    margin-bottom: -15px;
+}
+.contact_container .row .col-lg-7 form .row .col-lg-12 select {
+    width: 100% !important;
+    display: block !important;
+    color: #a3a3a3;
+    padding-left: 20px;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+.contact_container .row .col-lg-7 form .row .col-lg-12 select option {
+    color: rgb(44, 44, 44);
+    padding: 10px 0;
+}
+
+.nice-select {
+    width: 100%;
+    color: #a3a3a3;
+    display: none;
+}
+
+.contact_container .row .col-lg-7 form .row input,
+.contact_container .row .col-lg-7 form .row select {
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Cabin Condensed', sans-serif;
+    display: block;
+}
+
+.checkbox_container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 50px;
+}
+
+.checkbox_container .checkbox {
+    height: 20px !important;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.checkbox_container label {
+    cursor: pointer;
+}
+
+.reserv_ind {
+    display: flex;
+}
+
+.reserv_entr {
+    display: none;
+}
+
+.focus {
+    background: burlywood !important;
+    color: black !important;
+}
+
+/* ============ Footer ============= */
+
+.footer-container {
+    padding-top: 0;
+}

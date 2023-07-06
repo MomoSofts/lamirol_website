@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="templatepages.html :: head"></head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Offcanvas Menu Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="canvas-open">
+    <i class="icon_menu"></i>
+</div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="icon_close"></i>
+    </div>
+    <div class="search-icon  search-switch">
+        <i class="icon_search"></i>
+    </div>
+    <div class="header-configure-area">
+        <div class="language-option">
+            <img src="/img/flag.jpg" alt="">
+            <span>EN <i class="fa fa-angle-down"></i></span>
+            <div class="flag-dropdown">
+                <ul>
+                    <li><a href="#">Zi</a></li>
+                    <li><a href="#">Fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" class="bk-btn">Mes Reservations</a>
+    </div>
+    
+    <div id="mobile-menu-wrap"></div>
+    <div class="top-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-eye"></i></a>
+    </div>
+    <ul class="top-widget">
+        <li><i class="fa fa-phone"></i> (+225) 07 09 115 115</li>
+        <li><i class="fa fa-envelope"></i> info@lamirolhotel.com</li>
+    </ul>
+</div>
+
+<!-- Offcanvas Menu Section End -->
+<section class="">
+    <!-- Header Section Begin -->
+
+    <!-- Header Section Begin -->
+    <header th:insert="templatepages.html :: header" class="header-section header-normal"></header>
+    <!-- Header End -->
+
+    <!-- Main start -->
+    <section class="hero-section">
+        <div class="container center">
+            <div class="content">
+                <h3 class="title">Restaurant</h3>
+                <div class="img_container">
+                    <img src="/img/lamirol_img/restaurant1.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/restaurant2.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/restaurant3.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/restaurant4.jpeg" alt="Image du restaurant">
+                </div>
+            </div>
+            <div class="content">
+                <h3 class="title">Bar</h3>
+                <div class="img_container bar_img">
+                    <img src="/img/lamirol_img/bar1.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/slide6.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/bar2.jpeg" alt="Image du restaurant">
+                    <img src="/img/lamirol_img/slide6.jpeg" alt="Image du restaurant">
+                </div>
+            </div>
+        </div>
+    </section><hr style="margin: 0px 0 -50px 0;">
+    <!-- Main end -->
+
+</section>
+    <!-- Footer Section Begin -->
+    <footer th:insert="template.html :: footer" class="footer-section"></footer>
+    <!-- Footer Section End -->
+</body>
+
+</html>
+
+

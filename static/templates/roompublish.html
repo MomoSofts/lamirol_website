@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lamirol hotel</title>
+    <meta property="og:url"           th:content="${siteBaseUrl}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         th:content="${applicData.title}" />
+    <meta property="og:description"   th:content="${applicData.description}" />
+    <meta property="og:image"         th:content="|/image/${applicData.imageId}|" />
+</head>
+<body>
+<div id="fb-root"></div>
+<h1 th:text="${applicData.title}"></h1>
+<img th:src="|/image/${applicData.imageId}|" />
+<p th:text="${applicData.description}"></p>
+</body>
+</html>
