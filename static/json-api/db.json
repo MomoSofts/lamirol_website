@@ -21,8 +21,8 @@
           "roomType": "SUITE",
           "roomName": "SUITE",
           "roomDescription": "Chambre disposant de toutes les commodités dignes de personnalité de haut de rang",
-          "roomPrice": 45000.00,
-          "roomNbr": 1,
+          "roomPrice": 45000,
+          "roomNbr": 2,
           "roomImage": "https://lamirolhotel.com/images/hebergement/suite/img1.JPG"
       }
     },
@@ -46,7 +46,7 @@
         "roomType": "Chambre standard rez de chaussée",
         "roomName": "Chambre standard rez de chaussée",
         "roomDescription": "Chambre personnalisée bénéficiant d’un garage intérieur pour préserver la discrétion",
-        "roomPrice": 30000.00,
+        "roomPrice": 30000,
         "roomNbr": 1,
         "roomImage": "https://lamirolhotel.com/images/hebergement/chambre_standard/img5.JPG"
     }

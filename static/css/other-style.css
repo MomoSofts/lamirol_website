@@ -86,7 +86,6 @@ body {
     border-radius: 0px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.39);
     transition: all .2s ease-in-out;
-    cursor: pointer;
 }
 
 .container .img_container img:hover {
@@ -139,7 +138,6 @@ main {
 
 .sport_img {
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
 }
 
 .sport_img:hover {
@@ -226,11 +224,11 @@ main {
     height: 170px;
     border-radius: 0.2rem;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .room_img img:hover {
-    opacity: 0.7;
+    /* opacity: 0.7; */
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 1200px) {
@@ -253,7 +251,6 @@ main {
 .group_elec img {
     height: 100%;
     width: 100%;
-    cursor: pointer;
 }
 
 .center .group_elec:hover {
@@ -288,7 +285,6 @@ main {
     height: 230px;
     width: 380px;
     border-radius: 0.5rem;
-    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -345,7 +341,6 @@ main {
 .navette_container img {
     flex: 1 1 50%;
     height: 300px;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
@@ -374,7 +369,6 @@ main {
     flex: 1 1 50%;
     height: 300px;
     width: 365px;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
@@ -402,7 +396,6 @@ main {
 .salle_container img {
     flex: 1 1 50%;
     height: 320px;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
