@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
-<head th:fragment="head">
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="LAMIROL HOTEL">
     <meta name="keywords" content="hotel,hotel reservation, hotel abidjan, reservation Abidjan, lamirol">
@@ -45,7 +45,7 @@
         <source src="videos/lamirolvid.mp4" type="video/mp4">
     </video>
     <!-- Header Section Begin -->
-    <header th:fragment="header" class="header-section-index header-normal">
+    <header class="header-section-index header-normal">
         <!-- Offcanvas Menu Section Begin -->
     <!--    <div class="offcanvas-menu-overlay"></div> -->
         <div class="canvas-open">
@@ -60,7 +60,7 @@
             </div>
             <div class="header-configure-area">
                 <div class="language-option">
-                    <img src="/img/flag.jpg" alt="">
+                    <img src="img/flag.jpg" alt="">
                     <span>EN <i class="fa fa-angle-down"></i></span>
                     <div class="flag-dropdown">
                         <ul>
@@ -141,7 +141,7 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="#">
-                                <img src="/img/logo_lamirol.png" alt="">
+                                <img src="img/logo_lamirol.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -220,10 +220,10 @@
                                 <label for="date-out">Type d'hebergement:</label>
 
                                 <select id="room-type" name="room-type" class="form-control">
-                                    <option  th:value="'M'" th:text="'Tout type'" ></option>
-                                    <option  th:value="'chambre_standard1'" th:text="'Chambre standard'" ></option>
-                                    <option th:value="'suite'" th:text="'Suite'" ></option>
-                                    <option th:value="'chambres_rez_chaussee'" th:text="'Chambre au rez de chaussee'" ></option>
+                                    <option>Tout Type</option>
+                                    <option value="chambre_standard1" >Chambre standard</option>
+                                    <option value="suite" >Suite</option>
+                                    <option value="chambres_rez_chaussee">Chambre au rez de chaussee</option>
                                 </select>
                             </div>
 
@@ -316,13 +316,13 @@
                 <div class="col-sm-3">
                     <div class="room-thumb">
 
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img1.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img2.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img3.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img4.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img5.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img6.JPG" style="width:100%">
-                        <img class="mySlides img-responsive" src="img/hebergement/suite/img7.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg1.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg2.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg3.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg4.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg5.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg6.JPG" style="width:100%">
+                        <img class="mySlides img-responsive" src="img/hebergement/suiteimg7.JPG" style="width:100%">
                         <div class="mask">
                             <div class="main" style="color:#df8709;">
                                 <h5 style="color:#325492;">Suite</h5>
@@ -354,15 +354,15 @@
                 <!-- Room -->
                 <div class="col-sm-3">
                     <div class="room-thumb">
-                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standard/img1.JPG"
+                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standardimg1.JPG"
                              style="width:100%">
-                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standard/img2.JPG"
+                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standardimg2.JPG"
                              style="width:100%">
-                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standard/img3.JPG"
+                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standardimg3.JPG"
                              style="width:100%">
-                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standard/img4.JPG"
+                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standardimg4.JPG"
                              style="width:100%">
-                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standard/img5.JPG"
+                        <img class="mySlides2 img-responsive" src="img/hebergement/chambre_standardimg5.JPG"
                              style="width:100%">
                         <div class="mask">
                             <div class="main" style="color:#df8709;">
@@ -394,15 +394,15 @@
                 <!-- Room -->
                 <div class="col-sm-3">
                     <div class="room-thumb">
-                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2/img1.JPG"
+                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2img1.JPG"
                              style="width:100%">
-                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2/img2.JPG"
+                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2img2.JPG"
                              style="width:100%">
-                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2/img3.JPG"
+                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2img3.JPG"
                              style="width:100%">
-                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2/img4.JPG"
+                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2img4.JPG"
                              style="width:100%">
-                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2/img5.JPG"
+                        <img class="mySlides3 img-responsive" src="img/hebergement/chambre_standard2img5.JPG"
                              style="width:100%">
                         <div class="mask">
                             <div class="main" style="color:#df8709;">
@@ -486,7 +486,7 @@
                     <div class="ft-about">
                         <div class="logo">
                             <a href="#">
-                                <img src="./img/logo_lamirol.png" alt="">
+                                <img src=".img/logo_lamirol.png" alt="">
                             </a>
                         </div>
                         <p>We inspire and reach millions of travelers<br/> across 90 local websites</p>
@@ -564,7 +564,7 @@
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="js/main.js"></script>
 <script>
     var slideIndex = 0;
     carousel();
